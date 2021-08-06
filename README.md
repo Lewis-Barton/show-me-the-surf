@@ -20,7 +20,6 @@ From these assumptions and the information, I have gathered I am using the 5 pla
   * [User Stories](#user-stories)
   * [Opportunities arising from User Stories](#opportunities-arising-from-user-stories)
   * [Design choices](#design-choices)
-    * [Information Architecture](#information-architecture)
     * [UI Styling](#ui-styling)
   * [Wireframes](#wireframes)
 * [Features](#features)
@@ -82,11 +81,37 @@ The following have also been identified from the owners perspective.
 ## Opportunities arising from User Stories
 ---
 
+Opportunities | Importance | Feasibility/Viability
+:--: | :--: | :--: |
+**Clean, and simple interface** | 5 | 5
+**Purpose of the website is clear** | 5 | 5
+**Search meets the needs of the user effectively** | 5 | 5
+**Search must be easy to use, minimal instructions required** | 5 | 5
+**Results are easy to see and clearly outlined** | 5 | 5
+**Places are shown for suggested location** | 4 | 4
+**~~Check bookings facilities at location for availability~~** | 2 | 2
+
 [Back to Index](#index)
 ## **Design Choices**
 ---
 
-### **Information Architecture**
+I have decided on the following design choices for the website based on the information that I have outlined above.
+
+These aspects will be **shared** site wide:
+
+* No navigation tabs/panels will be needed for this website, given the purpose of the application only a link back to the home page with the icon for this.
+* The bottom of each page will hold copyright information, and also a disclaimer for the accuracy of the information that has been provided.
+
+I have outlined the below to hold on the **Home Page**:
+
+* Introduction statement, at the top of the page with information on what is needed to complete the search.
+* Search function to submit data to API for results to be shown.
+
+The **Results Page** will hold the following information:
+
+* Quick glance view of the best location for the date chosen.
+* Map including points of interest near the best location given.
+* Detailed explanation of results towards the bottom of the page.
 
 [Back to Index](#index)
 ### **UI Styling**
