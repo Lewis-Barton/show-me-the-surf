@@ -116,6 +116,18 @@ The **Results Page** will hold the following information:
 [Back to Index](#index)
 ### **UI Styling**
 
+I have decided on the following styling choices to suit the needs and create an appropriate asthetic for the website.
+
+### **Colous**
+
+I have looked a few different colour palettes that have been created based around surfing. I have decided to use lots of whitespace, and grey scales to compliment the colour palette that I have chosen from icolorpalette.com (Full accreditation links in the acknowledments below). I feel this colours best convey the message that the site is suited for and will compliment the content of the site greatly.
+
+### **Styling**
+
+Considering the needs of the user and the device that they will most likely be viewing the website from I have opted for a **mobile first** philosophy as I believe the majority of users will be viewing the site from this device. It will be fully responsive and the design will adapt to the device it is displayed to offer the best UX as possible for all users.
+
+I will make the design as clean and minimal as possible, whitespacing is very important for this as I would like it to display everything as well as possible, there are only 2 pages so the information can easily be spread out over the two without concern of the entire site appearing too cluttered.
+
 [Back to Index](#index)
 ## Wireframes
 ---
