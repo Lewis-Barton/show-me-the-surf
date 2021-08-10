@@ -132,6 +132,11 @@ I will make the design as clean and minimal as possible, whitespacing is very im
 ## Wireframes
 ---
 
+All wireframes used for this project were created using Figma. These will be used for the basis of design and development of the website, however these are subject to change.
+
+*[Home Page]()
+*[Results Page]()
+
 [Back to Index](#index)
 # **Features**
 
@@ -144,6 +149,10 @@ I will make the design as clean and minimal as possible, whitespacing is very im
 
 [Back to Index](#index)
 # **Technologies Used**
+
+* [Figma](https://figma.com) was used to produce all wireframes for this project.
+* [VS Code](https://code.visualstudio.com/) was used to develop this website.
+* [GitBash](https://git-scm.com/downloads) was used for Git version control and pushing to GitHub.
 
 [Back to Index](#index)
 # **Testing**
@@ -167,6 +176,9 @@ I will make the design as clean and minimal as possible, whitespacing is very im
 [Back to Index](#index)
 ## Media
 ---
+
+* [icolorpallete](https://icolorpalette.com/palette-by-themes/surfing) - Used to find colour palette to use.
+* [Pexels](https://pexels.com) - Resource for copyright free images, all images are individually creditied with links within the code.
 
 [Back to Index](#index)
 ## Code
