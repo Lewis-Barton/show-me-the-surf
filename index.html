@@ -19,25 +19,48 @@
     <title>Show me the surf</title>
   </head>
   <body>
-    <header>
-      <div class="container-fluid banner-container">
-        <!-- https://www.pexels.com/photo/person-surfing-416676/ -->
-        <img
-          src="assets/images/hero.webp"
-          data-src="assets/images/hero.webp"
-          alt="Man surfing"
-          class="hero-banner lazyload"
-        />
-        <div class="hero-overlay">
-          <h1>Show me the Surf</h1>
-          <h3>Chase the waves for your next break away!</h3>
-        </div>
-      </div>
-    </header>
+    <div class="scroll-container">
+      <section class="one">
+        <header>
+          <!-- <nav class="navbar bg--primary">
+                  <a href="" class="navbar-brand">
+                    <img
+                      src="assets/images/logo-transparent.webp"
+                      data-src="assets/images/logo-transparent.webp"
+                      alt=""
+                      class="lazyload logo"
+                  /></a>
+                </nav> -->
 
-    <section></section>
+          <div class="container-fluid">
+            <div class="banner-container">
+              <img
+                src="assets/images/logo-transparent.webp"
+                data-src="assets/images/logo-transparent.webp"
+                alt=""
+                class="lazyload logo"
+              />
+              <!-- https://www.pexels.com/photo/person-surfing-416676/ -->
+              <img
+                src="assets/images/hero.webp"
+                data-src="assets/images/hero.webp"
+                alt=""
+                class="lazyload hero"
+              />
+              <div class="hero-overlay">
+                <h1>Show me the Surf</h1>
+                <h3>Chase the waves for your next break away!</h3>
+              </div>
+            </div>
+          </div>
+        </header>
+      </section>
 
-    <footer></footer>
+      <section class="two">
+        <footer></footer>
+      </section>
+    </div>
+
     <!-- Bootstrap JS links -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -50,7 +73,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- lazysizes js cdn -->
+    <!-- lazysizes JS cdn -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
       integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="

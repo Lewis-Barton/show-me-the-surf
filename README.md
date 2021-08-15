@@ -174,6 +174,7 @@ _[Results Page]()
 - [GitBash](https://git-scm.com/downloads) was used for Git version control and pushing to GitHub.
 - [Lazysizes](https://github.com/aFarkas/lazysizes?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library) was used to optimise loading of images.
 - [Bootstrap](https://getbootstrap.com/) was used for styling and utility classes.
+- [Google WebP](https://developers.google.com/speed/webp/docs/using) - Library used to convert png files to webp files.
 
 [Back to Index](#index)
 
@@ -209,12 +210,16 @@ _[Results Page]()
 
 - [icolorpallete](https://icolorpalette.com/palette-by-themes/surfing) - Used to find colour palette to use.
 - [Pexels](https://pexels.com) - Resource for copyright free images, all images are individually creditied with links within the code.
+- [Hatchful](https://hatchful.shopify.com/) - Used to generate the logo and favicon for the website.
 
 [Back to Index](#index)
 
 ## Code
 
 ---
+
+- [MDN](https://developer.mozilla.org/en-US/) - Learning resource.
+- [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Learning resource.
 
 [Back to Index](#index)
 
