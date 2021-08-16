@@ -31,6 +31,16 @@ section {
   background-color: #b8d8df;
 }
 
+.btn-submit {
+  background-color: #b8d8df;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #6ea8b4;
+  color: #fff;
+}
+
 header .container-fluid {
   padding: 0;
 }
@@ -99,5 +109,9 @@ header .container-fluid {
   .hero-overlay {
     top: 50%;
   }
+}
+
+.two {
+  padding: 50px;
 }
 /*# sourceMappingURL=style.css.map */

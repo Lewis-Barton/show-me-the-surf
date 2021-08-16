@@ -9,6 +9,7 @@ $lg: 991px;
 $laptop: 1023px;
 $desktop: 1119px;
 $primary: #b8d8df;
+$secondary: #6ea8b4;
 
 // GENERAL STYLING
 * {
@@ -39,6 +40,15 @@ section {
 
 .bg--primary {
   background-color: $primary;
+}
+
+.btn-submit {
+  background-color: $primary;
+  color: #fff;
+  &:hover {
+    background-color: $secondary;
+    color: #fff;
+  }
 }
 
 // HERO IMAGE STYLING
@@ -101,4 +111,9 @@ header {
   @media screen and (min-width: $sm) {
     top: 50%;
   }
+}
+
+// FORM STYLING
+.two {
+  padding: 50px;
 }
