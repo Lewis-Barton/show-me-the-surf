@@ -113,7 +113,23 @@ header {
   }
 }
 
+// SECTION STYLING
+#two {
+  position: relative;
+}
+
 // FORM STYLING
-.two {
+.form-container {
   padding: 50px;
+}
+
+// FOOTER
+footer {
+  position: absolute;
+  background-color: #b4bcc7;
+  height: 25vh;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
 }

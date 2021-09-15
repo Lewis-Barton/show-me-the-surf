@@ -111,7 +111,21 @@ header .container-fluid {
   }
 }
 
-.two {
+#two {
+  position: relative;
+}
+
+.form-container {
   padding: 50px;
+}
+
+footer {
+  position: absolute;
+  background-color: #b4bcc7;
+  height: 25vh;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  padding: 25px;
 }
 /*# sourceMappingURL=style.css.map */
