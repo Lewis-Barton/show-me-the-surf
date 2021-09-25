@@ -10,7 +10,6 @@ function checkDate(inputDate) {
   var today = new Date();
   var week = new Date();
   week.setDate(today.getDate() + 7);
-  var dateValid = false;
 
   if (
     (today.toDateString() < inputDate.toDateString() &&
@@ -19,13 +18,33 @@ function checkDate(inputDate) {
       today.getMonth() === inputDate.getMonth() &&
       today.getDate() === inputDate.getDate())
   ) {
-    dateValid = true;
-    console.log(dateValid);
+    return true;
   } else if (
     today.toDateString() > inputDate.toDateString() ||
     inputDate.toDateString() > week.toDateString()
   ) {
-    dateValid = false;
-    console.log(dateValid);
+    return false;
   }
+}
+
+function checkLocations() {
+  const locationIds = [
+    'locationOne',
+    'locationTwo',
+    'locationThree',
+    'locationFour',
+  ];
+
+  locationIds.forEach(function (location) {
+    const input = document.getElementById(location);
+    const searchBox = new google.maps.places.SearchBox(input);
+
+    searchBox.addListener('places_changed', () => {
+      const places = searchBox.getPlaces();
+
+      if (places.length == 0) {
+        return;
+      }
+    });
+  });
 }
