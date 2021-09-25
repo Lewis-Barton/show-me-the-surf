@@ -3,31 +3,49 @@ var form = document.getElementsByTagName('form')[0];
 form.addEventListener('submit', function (event) {
   const date = new Date(form.date.value);
 
-  checkDate(date);
+  if (!checkDate(date)) {
+    dateError(date);
+    event.preventDefault();
+  }
 });
 
 function checkDate(inputDate) {
   var today = new Date();
   var week = new Date();
-  week.setDate(today.getDate() + 7);
+  week.setDate(today.getDate() + 6);
+  var validDates = [today];
+  var currentYear = today.getFullYear();
+  var currentMonth = today.getMonth();
+  var currentDay = today.getDate();
+  var dateValid = false;
 
-  if (
-    (today.toDateString() < inputDate.toDateString() &&
-      inputDate.toDateString() < week.toDateString()) ||
-    (today.getFullYear() === inputDate.getFullYear() &&
-      today.getMonth() === inputDate.getMonth() &&
-      today.getDate() === inputDate.getDate())
-  ) {
-    return true;
-  } else if (
-    today.toDateString() > inputDate.toDateString() ||
-    inputDate.toDateString() > week.toDateString()
-  ) {
-    return false;
+  while (validDates[validDates.length - 1] < week) {
+    validDates.push(new Date(currentYear, currentMonth, ++currentDay));
   }
+
+  for (let i = 0; i < validDates.length; i++) {
+    if (
+      validDates[i].getFullYear === inputDate.getFullYear &&
+      validDates[i].getMonth === inputDate.getMonth &&
+      validDates[i].getDate() === inputDate.getDate()
+    ) {
+      dateValid = true;
+    }
+  }
+
+  return dateValid;
 }
 
-function checkLocations() {
+function dateError(invalidDate) {
+  const errorDisplay = document.getElementById('error');
+
+  errorDisplay.textContent =
+    'The date ' +
+    invalidDate.toDateString() +
+    ' is invalid. Please ensure that the date is within 7 days of today';
+}
+
+function getLocations() {
   const locationIds = [
     'locationOne',
     'locationTwo',
@@ -51,5 +69,5 @@ function checkLocations() {
 }
 
 window.onload = function () {
-  checkLocations();
+  getLocations();
 };
