@@ -36,11 +36,12 @@ function checkLocations() {
   ];
 
   locationIds.forEach(function (location) {
+    // SEARCHBOX CODE TAKEN FROM PLACES DOCUMENTATION
     const input = document.getElementById(location);
     const searchBox = new google.maps.places.SearchBox(input);
 
     searchBox.addListener('places_changed', () => {
-      const places = searchBox.getPlaces();
+      const places = searchBox.getPlaces()[0];
 
       if (places.length == 0) {
         return;
@@ -48,3 +49,7 @@ function checkLocations() {
     });
   });
 }
+
+window.onload = function () {
+  checkLocations();
+};
