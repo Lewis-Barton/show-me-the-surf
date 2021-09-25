@@ -16,14 +16,6 @@
     <!-- CSS sheet link -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- jQuery 3 Uncompressed cdn -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/js/formValidation.js" defer></script>
-
     <title>Show me the surf</title>
   </head>
   <body>
@@ -68,56 +60,39 @@
               </p>
             </div>
             <div class="col-lg-6 order-lg-1">
-              <form onsubmit="return checkForm(this);">
-                <div class="row">
-                  <div class="col">
-                    <label for="date" class="form-label">Date</label>
-                    <input
-                      type="date"
-                      id="date"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row py-4">
-                  <div class="col-md-6 col-lg-12">
-                    <label for="locationOne" class="form-label"
-                      >Location 1</label
-                    >
-                    <input
-                      type="text"
-                      id="locationOne"
-                      class="form-control"
-                      required
-                    />
-                    <label for="locationTwo" class="form-label"
-                      >Location 2</label
-                    >
-                    <input
-                      type="text"
-                      id="locationTwo"
-                      class="form-control"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 col-lg-12">
-                    <label for="locationThree" class="form-label"
-                      >Location 3</label
-                    >
-                    <input
-                      type="text"
-                      id="locationThree"
-                      class="form-control"
-                    />
-                    <label for="locationFour" class="form-label"
-                      >Location 4</label
-                    >
-                    <input type="text" id="locationFour" class="form-control" />
-                  </div>
-                </div>
-                <div class="col-4 offset-4 offset-lg-none text-center">
-                  <button type="submit" class="btn btn-submit">
+              <form id="userInput">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" id="date" class="form-control" required />
+                <input
+                  type="text"
+                  id="locationOne"
+                  class="form-control"
+                  role="searchbox"
+                  placeholder="Please enter a location."
+                />
+                <input
+                  type="text"
+                  id="locationTwo"
+                  class="form-control"
+                  role="searchbox"
+                  placeholder="Please enter a location."
+                />
+                <input
+                  type="text"
+                  id="locationThree"
+                  class="form-control"
+                  role="searchbox"
+                  placeholder="Please enter a location."
+                />
+                <input
+                  type="text"
+                  id="locationFour"
+                  class="form-control"
+                  role="searchbox"
+                  placeholder="Please enter a location."
+                />
+                <div class="text-center">
+                  <button class="btn btn-submit" id="inputSubmit">
                     Find the waves!
                   </button>
                 </div>
@@ -125,7 +100,6 @@
             </div>
           </div>
         </div>
-        <footer>test</footer>
       </section>
     </div>
 
@@ -148,5 +122,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- Google Places API -->
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAZmOL7T_OKV6VfE-AowL4810GgCTT4og&libraries=places"
+    ></script>
+    <script src="assets/js/formValidation.js"></script>
   </body>
 </html>

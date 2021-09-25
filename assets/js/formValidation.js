@@ -1,19 +1,31 @@
-function checkForm(formSubmitted) {
+var form = document.getElementsByTagName('form')[0];
+
+form.addEventListener('submit', function (event) {
+  const date = new Date(form.date.value);
+
+  checkDate(date);
+});
+
+function checkDate(inputDate) {
   var today = new Date();
-  var inputDate = new Date(formSubmitted.date.value);
-  var dateValid = true;
+  var week = new Date();
+  week.setDate(today.getDate() + 7);
+  var dateValid = false;
 
-  console.log(inputDate);
-
-  if (today.toDateString() > inputDate.toDateString()) {
-    dateValid = false;
-    console.log(dateValid);
-  } else if (
-    today.toDateString() < inputDate.toDateString() ||
+  if (
+    (today.toDateString() < inputDate.toDateString() &&
+      inputDate.toDateString() < week.toDateString()) ||
     (today.getFullYear() === inputDate.getFullYear() &&
       today.getMonth() === inputDate.getMonth() &&
       today.getDate() === inputDate.getDate())
   ) {
+    dateValid = true;
+    console.log(dateValid);
+  } else if (
+    today.toDateString() > inputDate.toDateString() ||
+    inputDate.toDateString() > week.toDateString()
+  ) {
+    dateValid = false;
     console.log(dateValid);
   }
 }
