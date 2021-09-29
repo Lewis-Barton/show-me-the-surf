@@ -56,13 +56,36 @@ function getLocations() {
   locationIds.forEach(function (location) {
     // SEARCHBOX CODE TAKEN FROM PLACES DOCUMENTATION
     const input = document.getElementById(location);
+    // Stores which input has had data entered
+    const currentLocation = input.id;
     const searchBox = new google.maps.places.SearchBox(input);
 
     searchBox.addListener('places_changed', () => {
-      const places = searchBox.getPlaces()[0];
+      const places = searchBox.getPlaces();
+      // Used to restrict the location sections that are needed
+      const typeRestrictions = {
+        country: 'country',
+        locality: 'locality',
+        region: 'administrative_area_level_1',
+      };
 
       if (places.length == 0) {
         return;
+      }
+
+      // Loops to check location types wanted
+      for (var a = 0; a < places.length; a++) {
+        // Gets the type of place for the inputted location to be looped through
+        const types = places[a].types;
+        // Loops through types array
+        for (var b = 0; b < types.length; b++) {
+          var hasType = types[b];
+
+          // Checks if type is in location array
+          if (typeRestrictions.hasOwnProperty(hasType)) {
+            console.log(places[a]['long_name']);
+          }
+        }
       }
     });
   });
