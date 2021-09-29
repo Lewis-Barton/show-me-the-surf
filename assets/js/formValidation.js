@@ -61,7 +61,7 @@ function getLocations() {
     const searchBox = new google.maps.places.SearchBox(input);
 
     searchBox.addListener('places_changed', () => {
-      const places = searchBox.getPlaces();
+      const places = searchBox.getPlaces()[0];
       // Used to restrict the location sections that are needed
       const typeRestrictions = {
         country: 'country',
