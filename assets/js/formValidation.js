@@ -77,27 +77,28 @@ function getLocations() {
 }
 
 function getTidal(tidalTown) {
-  const url = `https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?name=${tidalTown}`;
+  var params = {
+    name: tidalTown,
+  };
 
-  const myHeaders = new Headers();
-  myHeaders.append(
-    'Ocp-Apim-Subscription-Key',
-    '31828e9a573b40c3a3829e4f3900c8d5'
-  );
-
-  const myRequest = new Request(url, {
-    method: 'GET',
-    headers: myHeaders,
-    mode: 'cors',
-    cache: 'default',
-  });
-
-  fetch(myRequest)
-    .then(function (response) {
-      console.log('Successful response!');
+  $.ajax({
+    url:
+      'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?' +
+      $.param(params),
+    befordSend: function (xhrObj) {
+      xhrObj.setRequestHeader(
+        'Ocp-Apim-Subscription-Key',
+        '31828e9a573b40c3a3829e4f3900c8d5'
+      );
+    },
+    type: 'GET',
+    data: '{body}',
+  })
+    .done(function (data) {
+      alert('success');
     })
-    .then(function (date) {
-      console.log('Data Successful!');
+    .fail(function () {
+      alert('error');
     });
 }
 
