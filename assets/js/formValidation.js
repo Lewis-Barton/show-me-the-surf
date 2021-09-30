@@ -62,33 +62,43 @@ function getLocations() {
 
     searchBox.addListener('places_changed', () => {
       const places = searchBox.getPlaces()[0];
-      // Used to restrict the location sections that are needed
-      const typeRestrictions = {
-        country: 'country',
-        locality: 'locality',
-        region: 'administrative_area_level_1',
-      };
 
       if (places.length == 0) {
         return;
       }
 
-      // Loops to check location types wanted
-      for (var a = 0; a < places.length; a++) {
-        // Gets the type of place for the inputted location to be looped through
-        const types = places[a].types;
-        // Loops through types array
-        for (var b = 0; b < types.length; b++) {
-          var hasType = types[b];
+      const placeName = places.name;
+      const latitude = places.geometry.location.lat();
+      const longitude = places.geometry.location.lng();
 
-          // Checks if type is in location array
-          if (typeRestrictions.hasOwnProperty(hasType)) {
-            console.log(places[a]['long_name']);
-          }
-        }
-      }
+      getTidal(placeName);
     });
   });
+}
+
+function getTidal(tidalTown) {
+  const url = `https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?name=${tidalTown}`;
+
+  const myHeaders = new Headers();
+  myHeaders.append(
+    'Ocp-Apim-Subscription-Key',
+    '31828e9a573b40c3a3829e4f3900c8d5'
+  );
+
+  const myRequest = new Request(url, {
+    method: 'GET',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default',
+  });
+
+  fetch(myRequest)
+    .then(function (response) {
+      console.log('Successful response!');
+    })
+    .then(function (date) {
+      console.log('Data Successful!');
+    });
 }
 
 window.onload = function () {

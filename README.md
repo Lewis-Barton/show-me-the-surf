@@ -148,8 +148,8 @@ I will make the design as clean and minimal as possible, whitespacing is very im
 
 All wireframes used for this project were created using Figma. These will be used for the basis of design and development of the website, however these are subject to change.
 
-_[Home Page]()
-_[Results Page]()
+- [Home Page]()
+- [Results Page]()
 
 [Back to Index](#index)
 
@@ -175,6 +175,8 @@ _[Results Page]()
 - [Lazysizes](https://github.com/aFarkas/lazysizes?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library) was used to optimise loading of images.
 - [Bootstrap](https://getbootstrap.com/) was used for styling and utility classes.
 - [Google WebP](https://developers.google.com/speed/webp/docs/using) - Library used to convert png files to webp files.
+- [Google Places API]() - used to locate desired places for comparison by user.
+- [Admirality API]() - Used to get tidal information for desired places.
 
 [Back to Index](#index)
 
@@ -220,6 +222,8 @@ _[Results Page]()
 
 - [MDN](https://developer.mozilla.org/en-US/) - Learning resource.
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Learning resource.
+- [Google Place API Docs]() - Learning resource.
+- [Admirality API Docs]() - Learning resource.
 
 [Back to Index](#index)
 
