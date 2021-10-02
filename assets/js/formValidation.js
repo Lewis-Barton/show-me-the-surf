@@ -187,28 +187,32 @@ function calculateResults() {
     let rating = 0;
     rating += calculateTemp(loc);
     rating += calculateWind(loc);
+    rating += calculateCloud(loc);
+    rating += calculateRain(loc);
+    rating += calculateSnow(loc);
+    dayData[loc].score = rating;
   }
 }
 
 function calculateTemp(loc) {
   let rating = 0;
   let temp = dayData[loc].temp;
-  if (temp > 0) {
-    rating = 0;
-  } else if (0 < temp <= 10) {
+  if (temp > 0 && temp <= 10) {
     rating = 1;
-  } else if (10 < temp <= 15) {
+  } else if (temp > 10 && temp <= 15) {
     rating = 2;
-  } else if (15 < temp <= 20) {
+  } else if (temp > 15 && temp <= 20) {
     rating = 3;
-  } else if (20 < temp <= 25) {
+  } else if (temp > 20 && temp <= 25) {
     rating = 4;
-  } else if (25 < temp <= 30) {
+  } else if (temp > 25 && temp <= 30) {
     // Ideal temp between 25 and 30 deg C based on information found from
     // https://houseofsurf.co/best-surf-conditions-for-beginners/
     rating = 5;
   } else if (30 < temp) {
     rating = 4;
+  } else {
+    rating = 0;
   }
 
   return rating;
@@ -219,19 +223,75 @@ function calculateWind(loc) {
   let wind = dayData[loc].wind;
   let knots = wind * 1.943844; // Convert M/S to Knots - easier to manipulate and data set compared to is in knots.
 
-  if (knots > 0) {
-    rating = 0;
-  } else if (0 < knots <= 2) {
+  if (knots > 0 && knots <= 2) {
     rating = 5;
-  } else if (2 < knots <= 4) {
+  } else if (knots > 2 && knots <= 4) {
     rating = 4;
-  } else if (4 < knots <= 6) {
+  } else if (knots > 4 && knots <= 6) {
     rating = 3;
-  } else if (6 < knots <= 8) {
+  } else if (knots > 6 && knots <= 8) {
     rating = 2;
-  } else if (8 < knots <= 10) {
+  } else if (knots > 8 && knots <= 10) {
     rating = 1;
-  } else if (10 < knots) {
+  } else {
+    rating = 0;
+  }
+
+  return rating;
+}
+
+function calculateCloud(loc) {
+  let rating = 0;
+  let cloud = dayData[loc].cloud;
+
+  if (cloud <= 0) {
+    rating = 5;
+  } else if (cloud > 0 && cloud <= 20) {
+    rating = 4;
+  } else if (cloud > 20 && cloud <= 40) {
+    rating = 3;
+  } else if (cloud > 40 && cloud <= 60) {
+    rating = 2;
+  } else if (cloud > 60 && cloud <= 80) {
+    rating = 1;
+  } else if (cloud > 80) {
+    rating = 0;
+  }
+
+  return rating;
+}
+
+function calculateRain(loc) {
+  let rating = 0;
+  let rain = dayData[loc].rain;
+
+  // 10 year mean of rainfall per year is ~1500mm, ~125mm per month, ~29mm per week, ~4mm per day
+  // Highest UK 24 hours rainfall in 24 is 280mm
+  // Highest UK average in 24 hours is 32mm
+  if (rain <= 0) {
+    rating = 5;
+  } else if (rain > 0 && rain <= 6) {
+    rating = 4;
+  } else if (rain > 6 && rain <= 12) {
+    rating = 3;
+  } else if (rain > 12 && rain <= 18) {
+    rating = 2;
+  } else if (rain > 18 && rain <= 24) {
+    rating = 1;
+  } else if (rain > 24) {
+    rating = 0;
+  }
+
+  return rating;
+}
+
+function calculateSnow(loc) {
+  let rating = 0;
+  let snow = dayData[loc].snow;
+
+  if (snow <= 0) {
+    rating = 5;
+  } else if (snow > 0) {
     rating = 0;
   }
 
