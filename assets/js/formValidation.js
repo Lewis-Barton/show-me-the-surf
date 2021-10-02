@@ -191,7 +191,11 @@ function calculateResults() {
     rating += calculateRain(loc);
     rating += calculateSnow(loc);
     dayData[loc].score = rating;
+    console.log(rating);
   }
+
+  const dayDataStorage = JSON.stringify(dayData);
+  localStorage.setItem('dayData', dayDataStorage);
 }
 
 function calculateTemp(loc) {
