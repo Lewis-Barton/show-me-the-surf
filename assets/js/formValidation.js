@@ -1,4 +1,5 @@
 var form = document.getElementsByTagName('form')[0];
+const dayData = {};
 
 form.addEventListener('submit', function (event) {
   const date = new Date(form.date.value);
@@ -72,6 +73,7 @@ function getLocations() {
       const longitude = places.geometry.location.lng();
 
       getTidal(placeName);
+      getWeather(longitude, latitude, currentLocation);
     });
   });
 }
@@ -99,6 +101,24 @@ function getTidal(tidalTown) {
     })
     .fail(function () {
       alert('error');
+    });
+}
+
+function getWeather(lng, lat, inputId) {
+  const key = 'bbc573251f7231d889f8506528105528';
+  const exclusions = 'current,minutely,hourly,alerts';
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=${exclusions}&appid=${key}`;
+
+  fetch(url)
+    .then(function (response) {
+      // Returns API call in json format to be manipulated
+      return response.json();
+    })
+    .then(function (data) {
+      // Data to be passed to update day data
+    })
+    .catch(function (error) {
+      console.log(error);
     });
 }
 
