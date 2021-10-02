@@ -1,14 +1,12 @@
-# **[Show Me The Surf]()**
+# **[Show Me The Surf](https://lewis-barton.github.io/show-me-the-surf/index.html)**
 
 # **Project Description**
 
-This project has been developed for my second Milestone project assignment following the Code Institute course that I am currently completing. I have chosen an idea that was given from the list give in the assessment criteria of "Create a site that calls an API to help the user choose a holiday based on their needs"
+This project has been developed for my second Milestone project assignment following the Code Institute course that I am currently completing. I have chosen an idea that was given from the list give in the assessment criteria of "Create a site that calls an API to help the user choose a location based on their needs"
 
-From this I have decided to create a website that allows the user to search for a holiday based on where would have the best surf (tidal data) for their chosen dates. To do this I have looked at suitable APIs that have this information available, I will manipulate their data and evaluate the information that has been returned.
+From this I have decided to create a website that allows the user to search for a location based on where would have the best surfing conditions for their chosen date. To do this I have looked at suitable APIs that have this information available, I will manipulate their data and evaluate the information that has been returned.
 
-For this project I have had to make some of the following assumptions. The website itself does not provide travel packages but will instead operate through partner websites instead.
-
-From these assumptions and the information, I have gathered I am using the 5 planes of UX methodology that has been explained within the course to; identify the user needs, the features are needed in the design, how the information is structured and logically grouped. These have then been used to produce a wireframe to show how this is implemented and a basis for what the project will look like on completion.
+I am using the 5 planes of UX methodology to; identify the user needs, the features are needed in the design, how the information is structured and logically grouped. These have then been used to produce a wireframe to show how this is implemented and a basis for what the project will look like on completion.
 
 # **Index**
 
@@ -51,7 +49,7 @@ The main objective for this project is to create a fully responsive website for 
 
 ---
 
-The goal for the end user is to find the best holiday based on their input locations that will best suit their requirements for a certain day. The target audience of these customers will be surfing enthusiasts, or other sea activity based enthusiasts, so styling and images will be chosen with this in mind.
+The goal for the end user is to find the best location based on their input that will best suit their requirements for a given day. The target audience of these customers will be surfing enthusiasts, so styling and images will be chosen with this in mind.
 
 [Back to Index](#index)
 
@@ -91,15 +89,14 @@ The following have also been identified from the owners perspective.
 
 ---
 
-|                         Opportunities                          | Importance | Feasibility/Viability |
-| :------------------------------------------------------------: | :--------: | :-------------------: |
-|                **Clean, and simple interface**                 |     5      |           5           |
-|              **Purpose of the website is clear**               |     5      |           5           |
-|       **Search meets the needs of the user effectively**       |     5      |           5           |
-| **Search must be easy to use, minimal instructions required**  |     5      |           5           |
-|        **Results are easy to see and clearly outlined**        |     5      |           5           |
-|          **Places are shown for suggested location**           |     4      |           4           |
-| **~~Check bookings facilities at location for availability~~** |     2      |           2           |
+|                         Opportunities                         | Importance | Feasibility/Viability |
+| :-----------------------------------------------------------: | :--------: | :-------------------: |
+|                **Clean, and simple interface**                |     5      |           5           |
+|              **Purpose of the website is clear**              |     5      |           5           |
+|      **Search meets the needs of the user effectively**       |     5      |           5           |
+| **Search must be easy to use, minimal instructions required** |     5      |           5           |
+|       **Results are easy to see and clearly outlined**        |     5      |           5           |
+|        **~~Places are shown for suggested location~~**        |     4      |           4           |
 
 [Back to Index](#index)
 
@@ -149,8 +146,17 @@ I will make the design as clean and minimal as possible, whitespacing is very im
 
 All wireframes used for this project were created using Figma. These will be used for the basis of design and development of the website, however these are subject to change.
 
-- [Home Page]()
-- [Results Page]()
+### Home page
+
+- [Desktop](wireframes/index-desktop.png)
+- [Tablet](wireframes/index-tablet.png)
+- [Mobile](wireframes/index-mobile.png)
+
+### Results page
+
+- [Desktop](wireframes/results-desktop.png)
+- [Tablet](wireframes/results-tablet.png)
+- [Mobile](wireframes/results-mobile.png)
 
 [Back to Index](#index)
 
@@ -212,11 +218,52 @@ Below is a walkthrough of how the application intends to handle data, the DOM ma
 
 ---
 
+This project was developed using [VS Code text editor](https://code.visualstudio.com/) alongside the [Live server by ritwick dey](https://ritwickdey.github.io/vscode-live-server/) extension, committed to git and pushed to GitHub using the [GitBash](https://git-scm.com/downloads) terminal.
+
+To deploy this page to GitHub Pages from its [GitHub repository](https://github.com/Lewis-Barton/show-me-the-surf), the following steps were taken:
+
+1. Log into GitHub
+1. From the list of repositories on the screen, select **Lewis-Barton/show-me-the-surf**
+1. Select **Settings**, from the menu items near the top of the page.
+1. Select **Pages**, from the tab on the left-hand side of the screen.
+1. Under the **Source** section, click the drop-down menu labelled **none** and select **Main**.
+1. On selecting Main Branch, the page is automatically refreshed, and the website is now deployed.
+1. Go back to the **Pages** section to retrieve the link to the deployed website.
+
 [Back to Index](#index)
 
 ## How to run this project locally
 
 ---
+
+It is also possible to run this project on a local machine, in order to do this, you would have to clone this project from GitHub. There are multiple ways in which this can be completed, these have been outlined below.
+
+**Cloning with Git Bash**
+
+1. Follow this link to the [GitHub repository](https://github.com/Lewis-Barton/show-me-the-surf)
+1. Near the top of the page on the right-hand side there will be a button labelled 'Code' click on this.
+1. In the HTTPS section click the clip board on the right-hand side to copy the URL.
+1. Open [Git Bash](https://git-scm.com/downloads)/Git command terminal on your machine.
+1. Change the working directory to the location where you want the repository to be cloned to.
+1. Type `git clone` then paste the URL copied from section 3
+   `git clone https://github.com/Lewis-Barton/show-me-the-surf.git`
+
+1. Press Enter and your local clone will begin downloading and be created onto your machine.
+
+**GitHub Desktop**
+
+1. Follow this link to the [GitHub repository](https://github.com/Lewis-Barton/show-me-the-surf)
+1. Near the top of the page on the right-hand side there will be a button labelled 'Code' click on this.
+1. Below the HTTPS section there is an option labelled "Open with GitHub Desktop"
+1. If you have this installed it will open the programme on your machine, if you follow the steps shown on the screen you will then have a copy of the repository on your machine. If you do not have the programme installed on your machine then clicking on this option will take you to the download section for GitHub Desktop, once this has been downloaded and installed it will continue setting up the repository to be copied to your machine locally.
+
+**Download and extract the zip directly from GitHub**
+
+1. Follow this link to the [GitHub repository](https://github.com/Lewis-Barton/show-me-the-surf)
+1. Near the top of the page on the right-hand side there will be a button labelled 'Code' click on this.
+1. At the bottom of this pop-out there is an option labelled "Download ZIP" press this button to download the full directory to your machine.
+1. Once the ZIP has been downloaded open it with your extractor of choice (7zip, WinRAR, etc.)
+1. If you drag and drop the folder inside of this it will have all the files from the repository to be viewed/edited on your local machine.
 
 [Back to Index](#index)
 
