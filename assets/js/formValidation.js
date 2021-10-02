@@ -186,12 +186,32 @@ function calculateResults() {
   for (let loc of locations) {
     let rating = 0;
     rating += calculateTemp(loc);
+    console.log(rating);
   }
 }
 
 function calculateTemp(loc) {
   let rating = 0;
   let temp = dayData[loc].temp;
+  if (temp > 0) {
+    rating = 0;
+  } else if (0 < temp <= 10) {
+    rating = 1;
+  } else if (10 < temp <= 15) {
+    rating = 2;
+  } else if (15 < temp <= 20) {
+    rating = 3;
+  } else if (20 < temp <= 25) {
+    rating = 4;
+  } else if (25 < temp <= 30) {
+    // Ideal temp between 25 and 30 deg C based on information found from
+    // https://houseofsurf.co/best-surf-conditions-for-beginners/
+    rating = 5;
+  } else if (30 < temp) {
+    rating = 4;
+  }
+
+  return rating;
 }
 
 window.onload = function () {

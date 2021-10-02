@@ -226,6 +226,8 @@ Below is a walkthrough of how the application intends to handle data, the DOM ma
 
 ---
 
+- [House of Surf](https://houseofsurf.co/best-surf-conditions-for-beginners/) - Reference for best surfing conditions and explanations as to why.
+
 [Back to Index](#index)
 
 ## Media
