@@ -25,6 +25,7 @@ From these assumptions and the information, I have gathered I am using the 5 pla
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features left to Implement](#features-left-to-implement)
+- [Logic Walkthrough](#logic-walkthrough)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
@@ -165,18 +166,39 @@ All wireframes used for this project were created using Figma. These will be use
 
 ---
 
+- Tidal Data - Currently the API call for the tidal data does not function, I have read through the documentation for the API and
+  have asked for additional help on the matter but I am still getting a 401 error. I have opened a ticket with the API support
+  and asked a question on the forums to see if there are other issues with this. If/When I have a response I would like to
+  come back and implement this as it is a huge portion of the project that is unfortunately unable to work.
+
+[Back to Index](#index)
+
+# **Logic Walkthrough**
+
+Below is a walkthrough of how the application intends to handle data, the DOM manipulations that it requires to make, and any calculations that may occur.
+
+- User selects a date and enters desired locations to be checked. This will use Google Places API to get location data, and provide the searchbox functionality.
+- Once the locations have been chosen, the information will be passed through other functions to retrieve the data that is needed.
+- The place name of the locations will be passed through the Admirality API to check if there is a valid station within the area.
+- If the tidal station exists, the information for the chosen day will be added to the dayData object to be used later. Otherwise an error will be displayed to show no valid station has been selected.
+- Open Weather One Call API will then be used to call the weather information for all locations. Returning the temperature, rain, cloud, wind, etc.
+- When all information has been gathered, it will then be passed through a series of functions that will calculate which location is the best on the given day.
+- Once decided, this shall be stored to the local-device memory to be recalled when it goes onto the results page
+- The results for the location shall be displayed at a glance, with the option to go more in-depth if wanted.
+
 [Back to Index](#index)
 
 # **Technologies Used**
 
-- [Figma](https://figma.com) was used to produce all wireframes for this project.
-- [VS Code](https://code.visualstudio.com/) was used to develop this website.
-- [GitBash](https://git-scm.com/downloads) was used for Git version control and pushing to GitHub.
+- [Figma](https://figma.com) Used to produce all wireframes for this project.
+- [VS Code](https://code.visualstudio.com/) Used to develop this website.
+- [GitBash](https://git-scm.com/downloads) Used for Git version control and pushing to GitHub.
 - [Lazysizes](https://github.com/aFarkas/lazysizes?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library) was used to optimise loading of images.
-- [Bootstrap](https://getbootstrap.com/) was used for styling and utility classes.
+- [Bootstrap](https://getbootstrap.com/) - Used for styling and utility classes.
 - [Google WebP](https://developers.google.com/speed/webp/docs/using) - Library used to convert png files to webp files.
-- [Google Places API]() - used to locate desired places for comparison by user.
-- [Admirality API]() - Used to get tidal information for desired places.
+- [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - Used to locate desired places for comparison by user.
+- [Admirality API](https://admiraltyapi.portal.azure-api.net/docs/services/uk-tidal-api/operations/Stations_GetStation) - Used to get tidal information for desired places.
+- [Open Weather API](https://openweathermap.org/api) - Used to get weather data for locations
 
 [Back to Index](#index)
 
@@ -222,13 +244,16 @@ All wireframes used for this project were created using Figma. These will be use
 
 - [MDN](https://developer.mozilla.org/en-US/) - Learning resource.
 - [Bootstrap Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Learning resource.
-- [Google Place API Docs]() - Learning resource.
-- [Admirality API Docs]() - Learning resource.
+- [Google Place API Docs](https://developers.google.com/maps/documentation/places/web-service/overview) - Learning resource.
+- [Admirality API Docs](https://admiraltyapi.portal.azure-api.net/docs/services/uk-tidal-api/operations/Stations_GetStation) - Learning resource.
+- [Open Weather One Call API Docs](https://openweathermap.org/api/one-call-api) - Learning resource.
 
 [Back to Index](#index)
 
 ## Acknowledgements
 
 ---
+
+- Thank you to the tutor support that I have recieved when I have had difficulties.
 
 [Back to Index](#index)
