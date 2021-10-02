@@ -1,14 +1,26 @@
 var form = document.getElementsByTagName('form')[0];
-const dayData = {};
+const dayData = {
+  locationOne: {},
+  locationTwo: {},
+  locationThree: {},
+  locationFour: {},
+};
 
 form.addEventListener('submit', function (event) {
-  const date = new Date(form.date.value);
+  const date = getDate();
 
   if (!checkDate(date)) {
     dateError(date);
     event.preventDefault();
   }
 });
+
+function getDate() {
+  const form = document.getElementsByTagName('form')[0];
+  const date = new Date(form.date.value);
+
+  return date;
+}
 
 function checkDate(inputDate) {
   var today = new Date();
@@ -78,30 +90,25 @@ function getLocations() {
   });
 }
 
-function getTidal(tidalTown) {
-  var params = {
-    name: tidalTown,
-  };
-
-  $.ajax({
-    url:
-      'https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?' +
-      $.param(params),
-    befordSend: function (xhrObj) {
-      xhrObj.setRequestHeader(
-        'Ocp-Apim-Subscription-Key',
-        '31828e9a573b40c3a3829e4f3900c8d5'
-      );
+async function getTidal(tidalTown) {
+  const url = `https://admiraltyapi.azure-api.net/uktidalapi/api/V1/Stations?name=${tidalTown}`;
+  fetch(url, {
+    method: 'GET',
+    mode: 'no-cors',
+    cache: 'no-cache',
+    headers: {
+      'Content-Type': 'application/json',
+      'Ocp-Apim-Subscription-Key': 'a1550ee5d52542f0a2b82bada9e975a7',
     },
-    type: 'GET',
-    data: '{body}',
+    redirect: 'follow',
+    referrerPolicy: 'no-refferer',
+    credentials: 'include',
+    redirect: 'follow',
+    referrerPolicy: 'origin-when-cross-origin',
   })
-    .done(function (data) {
-      alert('success');
-    })
-    .fail(function () {
-      alert('error');
-    });
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
 }
 
 function getWeather(lng, lat, inputId) {
@@ -116,10 +123,15 @@ function getWeather(lng, lat, inputId) {
     })
     .then(function (data) {
       // Data to be passed to update day data
+      updateWeather(data, inputId);
     })
     .catch(function (error) {
       console.log(error);
     });
+}
+
+function updateWeather(weather, locationId) {
+  const date = getDate();
 }
 
 window.onload = function () {
