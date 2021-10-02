@@ -226,8 +226,6 @@ Below is a walkthrough of how the application intends to handle data, the DOM ma
 
 ---
 
-- [House of Surf](https://houseofsurf.co/best-surf-conditions-for-beginners/) - Reference for best surfing conditions and explanations as to why.
-
 [Back to Index](#index)
 
 ## Media
@@ -249,6 +247,8 @@ Below is a walkthrough of how the application intends to handle data, the DOM ma
 - [Google Place API Docs](https://developers.google.com/maps/documentation/places/web-service/overview) - Learning resource.
 - [Admirality API Docs](https://admiraltyapi.portal.azure-api.net/docs/services/uk-tidal-api/operations/Stations_GetStation) - Learning resource.
 - [Open Weather One Call API Docs](https://openweathermap.org/api/one-call-api) - Learning resource.
+- [House of Surf](https://houseofsurf.co/best-surf-conditions-for-beginners/) - Reference for best surfing conditions and explanations as to why.
+- [Gov UK](https://www.gov.uk/government/statistics/energy-trends-section-7-weather) - Reference for weather data in the UK
 
 [Back to Index](#index)
 

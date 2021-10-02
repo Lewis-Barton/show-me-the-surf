@@ -186,7 +186,7 @@ function calculateResults() {
   for (let loc of locations) {
     let rating = 0;
     rating += calculateTemp(loc);
-    console.log(rating);
+    rating += calculateWind(loc);
   }
 }
 
@@ -209,6 +209,30 @@ function calculateTemp(loc) {
     rating = 5;
   } else if (30 < temp) {
     rating = 4;
+  }
+
+  return rating;
+}
+
+function calculateWind(loc) {
+  let rating = 0;
+  let wind = dayData[loc].wind;
+  let knots = wind * 1.943844; // Convert M/S to Knots - easier to manipulate and data set compared to is in knots.
+
+  if (knots > 0) {
+    rating = 0;
+  } else if (0 < knots <= 2) {
+    rating = 5;
+  } else if (2 < knots <= 4) {
+    rating = 4;
+  } else if (4 < knots <= 6) {
+    rating = 3;
+  } else if (6 < knots <= 8) {
+    rating = 2;
+  } else if (8 < knots <= 10) {
+    rating = 1;
+  } else if (10 < knots) {
+    rating = 0;
   }
 
   return rating;
