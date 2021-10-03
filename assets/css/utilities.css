@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -38,5 +39,9 @@ section {
 .btn-submit:hover {
   background-color: #6ea8b4;
   color: #fff;
+}
+
+header .container-fluid {
+  padding: 0;
 }
 /*# sourceMappingURL=utilities.css.map */

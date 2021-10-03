@@ -1,0 +1,59 @@
+// VARIABLES
+$xs: 319px;
+$sm: 567px;
+$md: 767px;
+$lg: 991px;
+$laptop: 1023px;
+$desktop: 1119px;
+$wide-screen: 1919px;
+
+// HEADER STYLING
+.logo {
+  width: 75px;
+  height: 75px;
+
+  @media screen and (min-width: $md) {
+    width: 115px;
+    height: 115px;
+  }
+
+  @media screen and (min-width: $lg) {
+    width: 125px;
+    height: 125px;
+  }
+
+  @media screen and (min-width: $wide-screen) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-text {
+  font-size: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  transform: translateX(-40%);
+  padding: 0.3125rem 0;
+
+  @media screen and (min-width: $sm) {
+    font-size: 1.25rem;
+    transform: translateX(-25%);
+  }
+
+  @media screen and (min-width: $md) {
+    font-size: 2.125rem;
+    transform: translateX(-25%);
+  }
+
+  @media screen and (min-width: $lg) {
+    font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: $wide-screen) {
+    font-size: 3rem;
+  }
+}

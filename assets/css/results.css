@@ -1,0 +1,67 @@
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+@media screen and (min-width: 767px) {
+  .logo {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .logo {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.navbar {
+  padding: 0;
+}
+
+.nav-text {
+  font-size: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%);
+  padding: 0.3125rem 0;
+}
+
+@media screen and (min-width: 567px) {
+  .nav-text {
+    font-size: 1.25rem;
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav-text {
+    font-size: 2.125rem;
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .nav-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .nav-text {
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=results.css.map */
