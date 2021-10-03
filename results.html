@@ -37,27 +37,25 @@
         </header>
         <div class="row">
           <div class="col">
-            <h4 class="sub-heading">We think you should go to Barry!</h4>
+            <h4 id="location" class="sub-heading"></h4>
           </div>
         </div>
         <div class="row">
-          <div class="col">
-            <p class="results-p">
-              Based on the information that you have provided, we have found the
-              best location for you! As you know, the weather is not always as
-              reliable as we would like, make sure to check often leading up to
-              your date.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
+            <div class="results-p-container">
+                <p class="results-p">
+                    Based on the information that you have provided, we have found the
+                    best location for you! As you know, the weather is not always as
+                    reliable as we would like, make sure to check often leading up to
+                    your date.
+                  </p>
+            </div>
             <div id="map"></div>
-          </div>
         </div>
-        <button class="btn btn-submit" type="button" data-toggle="collapse" data-target="#moreInformation" aria-expanded="false" aria-controls="moreInformation">
-            Show me more!
-          </button>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-submit" type="button" data-toggle="collapse" data-target="#moreInformation" aria-expanded="false" aria-controls="moreInformation">
+                Show me more!
+              </button>
+        </div>
         </p>
         <div class="collapse" id="moreInformation">
           <div class="card card-body">

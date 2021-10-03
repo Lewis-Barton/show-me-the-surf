@@ -50,6 +50,9 @@ function displayResult(locationObject) {
   const clouds = Math.floor(locationObject.cloud);
   const rain = Math.floor(locationObject.rain);
 
+  document.getElementById(
+    'location'
+  ).innerHTML = `We think you should go to ${place}!`;
   document.getElementById('place').innerHTML = `${place}`;
   document.getElementById(
     'temp'
