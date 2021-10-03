@@ -166,16 +166,27 @@ All wireframes used for this project were created using Figma. These will be use
 
 ---
 
+From the structure that has been outlined above I have completed the following.
+
+- Clean, and simple interface - There is minimal cluttery on both of the pages that have been developed. There is good white spacing and an appealing UX while navigating the site.
+- Purpose of the website is clear - I feel that the purpose of the website is very clear from the start. The name of the site is self explanitory and tells the user what it is about.
+- Search meets the needs of the user effectively - The search will effectively determine the best conditions for what is being searched. It calculates on a number of different factors to match what is desired.
+- Search must be easy to use, minimal instructions required - The search is very intuitive, with a familiar layout it will be easy for the user to determine what is needed and there is also some form validation shown and feedback to the user for easy error adjustments.
+- Results are easy to see and clearly outlined - The overall result is displayed instantly when the page is displayed. The additional information shown is clear as to what each is and is easy to understand to see why it is the best choice.
+
 [Back to Index](#index)
 
 ## Features left to Implement
 
 ---
 
+Below is the list of features that I would have liked to implement to further improve the functionality of the website but due to certain issues and time restraints I was unable to do so.
+
 - Tidal Data - Currently the API call for the tidal data does not function, I have read through the documentation for the API and
   have asked for additional help on the matter but I am still getting a 401 error. I have opened a ticket with the API support
   and asked a question on the forums to see if there are other issues with this. If/When I have a response I would like to
   come back and implement this as it is a huge portion of the project that is unfortunately unable to work.
+- Nearby locations are let to be implemented, I would like to have the tidal data first working before trying this as the data that is required will drastically change based on the information that this would return.
 
 [Back to Index](#index)
 
@@ -205,10 +216,14 @@ Below is a walkthrough of how the application intends to handle data, the DOM ma
 - [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) - Used to locate desired places for comparison by user.
 - [Admirality API](https://admiraltyapi.portal.azure-api.net/docs/services/uk-tidal-api/operations/Stations_GetStation) - Used to get tidal information for desired places.
 - [Open Weather API](https://openweathermap.org/api) - Used to get weather data for locations
+- **HTML, SCSS, and JS** are the languages that are used during the development on this project.
+- [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/word) - Used to check spelling, punctuation, and grammar of the contents of the website and all additional write-ups
 
 [Back to Index](#index)
 
 # **Testing**
+
+For full documentation on how all of the tests on each document were carried out please see my [testing write up here](testing.md). Where I go through in detail the process for each page, what was checked, and how any issues or recommendations were dealt.
 
 [Back to Index](#index)
 
@@ -269,12 +284,6 @@ It is also possible to run this project on a local machine, in order to do this,
 
 # **Credits**
 
-## Content
-
----
-
-[Back to Index](#index)
-
 ## Media
 
 ---
@@ -303,6 +312,6 @@ It is also possible to run this project on a local machine, in order to do this,
 
 ---
 
-- Thank you to the tutor support that I have recieved when I have had difficulties.
+Thank you to the tutor support that I have recieved from code institute the discussions that were had with them helped diagnose the issues that I was having and explained what needed to be done to diagnose the issuse. I would also like to thank my friends and family for the feeback that has been provided on the site so that I am able to continue developing and improving as I go.
 
 [Back to Index](#index)
