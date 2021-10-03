@@ -1,3 +1,5 @@
+let map;
+
 function sortResults() {
   const dayDataReturned = JSON.parse(localStorage.getItem('dayData'));
   let results = [];
@@ -17,14 +19,27 @@ function sortResults() {
         let tempResults = results[count];
         let tempLocation = locations[count];
         results[count] = results[a];
-        locations[count] = location[a];
+        locations[count] = locations[a];
         results[a] = tempResults;
         locations[a] = tempLocation;
       }
     }
   }
-  console.log(results);
-  console.log(locations);
+  const lat = dayDataReturned[locations[0]].lat;
+  const lng = dayDataReturned[locations[0]].lng;
+  initMap(lat, lng);
+}
+
+function initMap(latitude, longitude) {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: latitude, lng: longitude },
+    zoom: 13,
+  });
+
+  new google.maps.Marker({
+    position: { lat: latitude, lng: longitude },
+    map,
+  });
 }
 
 window.onload = function () {

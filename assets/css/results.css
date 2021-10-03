@@ -64,4 +64,24 @@
     font-size: 3rem;
   }
 }
+
+.sub-heading {
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.results-container {
+  margin-top: 0;
+  height: 100%;
+}
+
+.results-p {
+  font-size: 0.75rem;
+}
+
+#map {
+  height: 200px;
+  width: 100%;
+}
 /*# sourceMappingURL=results.css.map */
