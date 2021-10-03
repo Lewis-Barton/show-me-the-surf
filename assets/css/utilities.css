@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.scroll-container {
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.bg--primary {
+  background-color: #b8d8df;
+}
+
+.btn-submit {
+  background-color: #b8d8df;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #6ea8b4;
+  color: #fff;
+}
+/*# sourceMappingURL=utilities.css.map */

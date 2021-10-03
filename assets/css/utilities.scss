@@ -1,0 +1,43 @@
+// VARIABLES
+$primary: #b8d8df;
+$secondary: #6ea8b4;
+
+// GENERAL STYLING
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.scroll-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.bg--primary {
+  background-color: $primary;
+}
+
+.btn-submit {
+  background-color: $primary;
+  color: #fff;
+  &:hover {
+    background-color: $secondary;
+    color: #fff;
+  }
+}
