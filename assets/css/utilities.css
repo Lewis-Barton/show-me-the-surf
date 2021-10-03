@@ -41,6 +41,11 @@ section {
   color: #fff;
 }
 
+.btn-submit a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header .container-fluid {
   padding: 0;
 }
