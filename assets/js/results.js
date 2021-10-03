@@ -28,6 +28,7 @@ function sortResults() {
   const lat = dayDataReturned[locations[0]].lat;
   const lng = dayDataReturned[locations[0]].lng;
   initMap(lat, lng);
+  displayResult(dayDataReturned[locations[0]]);
 }
 
 function initMap(latitude, longitude) {
@@ -40,6 +41,24 @@ function initMap(latitude, longitude) {
     position: { lat: latitude, lng: longitude },
     map,
   });
+}
+
+function displayResult(locationObject) {
+  const place = locationObject.thisLocation;
+  const temp = Math.floor(locationObject.temp);
+  const wind = locationObject.wind;
+  const clouds = Math.floor(locationObject.cloud);
+  const rain = Math.floor(locationObject.rain);
+
+  document.getElementById('place').innerHTML = `${place}`;
+  document.getElementById(
+    'temp'
+  ).innerHTML = `The temperature for the day will be ${temp}`;
+  document.getElementById(
+    'wind'
+  ).innerHTML = `Wind speeds of ${wind} m/s are expected on the day`;
+  document.getElementById('cloud').innerHTML = `${clouds}% chance of clouds`;
+  document.getElementById('rain').innerHTML = `${rain}% chance of rain`;
 }
 
 window.onload = function () {
