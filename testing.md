@@ -105,7 +105,7 @@ The page functions and looks as expected.
 
 Initially this file was checked with [W3C CSS Validation Service Jigsaw](https://jigsaw.w3.org/css-validator/)
 
-The documnet passed validation as CSS Level 3 + SVG, the only warnings that were produced are for the vendor extensions, which are not cause for concern.
+The document passed validation as CSS Level 3 + SVG, the only warnings that were produced are for the vendor extensions, which are not cause for concern.
 
 The page functions and looks as expected.
 
@@ -113,10 +113,6 @@ The page functions and looks as expected.
 
 # **JS**
 
-## **Index.js**
-
-[Back to index](#contents)
-
-## **Results.js**
+Both of the Javascript files were developed in VS Code using ESLint plugin to ensure that all of the code is correctly written and formatted. I have also looked at good standard practices when developing to ensure that appropriate steps were taken when developing.
 
 [Back to index](#contents)
