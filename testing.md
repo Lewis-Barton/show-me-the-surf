@@ -63,19 +63,51 @@ As with the index page, the site was developed with SCSS so the browser compatib
 
 ## **404**
 
+Initial check for errors in code done using [W3C Markup Validation Service](https://validator.w3.org/)
+
+- No issues were found on checking.
+
+The page was then checked for spelling mistakes using Word.
+
+---
+
+**Browser testing**
+
+I tested this page using the built in function of Safari to check between multiple devices and different browser software.
+
+As with the index page, the site was developed with SCSS so the browser compatibility properties were already added so very little else was needed to ensure it displayed correctly. Media queries were also used
+
 [Back to index](#contents)
 
 # **CSS**
 
 ## **Index.css**
 
+Initially this file was checked with [W3C CSS Validation Service Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+The documnet passed validation as CSS Level 3 + SVG, the only warnings that were produced are for the vendor extensions, which are not cause for concern.
+
+The page functions and looks as expected.
+
 [Back to index](#contents)
 
 ## **Results.css**
 
+Initially this file was checked with [W3C CSS Validation Service Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+The documnet passed validation as CSS Level 3 + SVG, the only warnings that were produced are for the vendor extensions, which are not cause for concern.
+
+The page functions and looks as expected.
+
 [Back to index](#contents)
 
 ## **Utilities.css**
+
+Initially this file was checked with [W3C CSS Validation Service Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+The documnet passed validation as CSS Level 3 + SVG, the only warnings that were produced are for the vendor extensions, which are not cause for concern.
+
+The page functions and looks as expected.
 
 [Back to index](#contents)
 
