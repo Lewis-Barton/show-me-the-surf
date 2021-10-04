@@ -28,11 +28,12 @@ Initial check for errors in code done using [W3C Markup Validation Service](http
 
   - Section Two does not have a header element, this is not an issue in this case.
 
-  The page was then checked for spelling mistakes using Word.
+The page was then checked for spelling mistakes using Word.
 
 ---
 
 **Browser testing**
+
 I tested this page using the built in function of Safari to check between multiple devices and different browser software.
 
 Because I have used SCSS for this site, it has already adapted the CSS files to ensure that it is all displayed correctly.
@@ -42,6 +43,21 @@ I have also done multiple media queries to ensure that the website looks and fun
 [Back to index](#contents)
 
 ## **Results**
+
+Initial check for errors in code done using [W3C Markup Validation Service](https://validator.w3.org/)
+
+- No `<p>` element in scope, but `</p>` seen
+  - This was an error from development that meant there was a closing tag left when it should have been removed. This was removed and the error is resolved.
+
+The page was then checked for spelling mistakes using Word.
+
+---
+
+**Browser testing**
+
+I tested this page using the built in function of Safari to check between multiple devices and different browser software.
+
+As with the index page, the site was developed with SCSS so the browser compatibility properties were already added so very little else was needed to ensure it displayed correctly. Media queries were also used
 
 [Back to index](#contents)
 
